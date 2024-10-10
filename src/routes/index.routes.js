@@ -3,7 +3,7 @@
 import { Router } from "express"
 
 // Lista de importação das rotas do projeto
-import planetasRoutes from "./rappers.routes.js"
+import rappersRoutes from "./rappers.routes.js"
 
 const routes = Router() 
 
