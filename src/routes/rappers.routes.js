@@ -2,7 +2,7 @@ import { response, Router } from "express";
 
 const rappersRoutes = Router()
 
-  export default rappersRoutes;
+
 
 // Array com planetas pré-cadastrados
 
@@ -77,3 +77,22 @@ rappersRoutes.post("/", (req, res) => {
       novoSuspeito,
     });
   });
+
+  // Rota para buscar um suspeito pelo id
+rappersRoutes.get("/:id", (req, res) => {
+    const { id } = req.params;
+  
+    // Busca um suspeito pelo id no array de suspeitos
+    const suspeito = suspeitos.find((suspect) => suspect.id == id);
+  
+    // Verifica se o suspeito foi encontrado
+    if (!suspeito) {
+      return res
+        .status(404)
+        .json({ message: `suspeito com id ${id} não encontrado!` });
+    }
+  
+    return res.status(200).json(suspeito);
+  });
+
+  export default rappersRoutes;
