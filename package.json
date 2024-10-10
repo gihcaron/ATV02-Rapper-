@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Projeto para a resolução da atividade 2 - Rapper  de back-end",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "dev": "nodemon src/server.js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gihcaron/ATV02-Rapper-.git"
