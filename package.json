@@ -1,0 +1,25 @@
+{
+  "name": "atv02--rapper",
+  "version": "1.0.0",
+  "description": "Projeto para a resolução da atividade 2 - Rapper  de back-end",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gihcaron/ATV02-Rapper-.git"
+  },
+  "keywords": [
+    "\"SENAI\"",
+    "\"NodeJS\"",
+    "\"JavaSript\"",
+    "\"Back-end\""
+  ],
+  "author": "Giovanna Caron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gihcaron/ATV02-Rapper-/issues"
+  },
+  "homepage": "https://github.com/gihcaron/ATV02-Rapper-#readme"
+}
