@@ -36,8 +36,7 @@ let suspeitos = [
 
 ];
 
-// Rota para listar todos os planetas
+// Rota para listar todos os suspeitos
 rappersRoutes.get("/", (req, res) => {
     return res.status(200).json(suspeitos);
   });
-  
