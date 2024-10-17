@@ -94,8 +94,33 @@ rappersRoutes.get("/:id", (req, res) => {
   
     return res.status(200).json(suspeito);
 });
+
+// Rota para editar um  supeito
+rappersRoutes.put("/:id", (req,res) => {
+    const { id } = req.params
+
+    const suspeito = suspeitos.find((suspect) => suspect.id === Number(id))
+
+
+    if (!suspeito) {
+        return res.status(404).send ({ message: "suspeito não encontrado"})
+    }
+
+    const {nome, idade, descricaoFisica, envolvimentoAtividades} = req.body
+
+    suspeito.nome = nome ;
+    suspeito.idade = idade ;
+    suspeito.descricaoFisica= descricaoFisica ;
+    suspeito.envolvimentoAtividades= envolvimentoAtividades ;
+
+    return res.status(200).send({
+        message: "suspeito atualizado",
+       
+    })
+})
+
  
-// Remove o planeta do array de suspeitos
+// Remove o suspeito do array de suspeitos
 rappersRoutes.delete("/:id", (req, res) => {
     const { id } = req.params;
     const suspeito = suspeitos.find((movie) => movie.id === Number(id));
@@ -108,5 +133,6 @@ rappersRoutes.delete("/:id", (req, res) => {
 
     return res.status(200).send({ message: "Suspeito deletado!"},  
     )})
+
     
   export default rappersRoutes;
