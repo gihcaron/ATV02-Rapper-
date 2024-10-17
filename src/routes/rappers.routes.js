@@ -123,13 +123,13 @@ rappersRoutes.put("/:id", (req,res) => {
 // Remove o suspeito do array de suspeitos
 rappersRoutes.delete("/:id", (req, res) => {
     const { id } = req.params;
-    const suspeito = suspeitos.find((movie) => movie.id === Number(id));
+    const suspeito = suspeitos.find((suspect) => suspect.id === Number(id));
 
     if (!suspeito) {
         return res.status(404).send ({ message: "suspeito não encontrado"});
     }
     
-    suspeitos = suspeitos.filter((movie) => movie.id !== Number(id));
+    suspeitos = suspeitos.filter((suspect) => suspect.id !== Number(id));
 
     return res.status(200).send({ message: "Suspeito deletado!"},  
     )})
